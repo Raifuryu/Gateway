@@ -1,12 +1,12 @@
 <?php
 return [
-    'books1' => [
-        'base_uri' => env('BOOKS1_SERVICE_BASE_URL'),
-        'secret' => env('BOOKS1_SERVICE_SECRET'),
+    'books' => [
+        'base_uri' => env('BOOKS_SERVICE_BASE_URL'),
+        'secret' => env('BOOKS_SERVICE_SECRET'),
     ],
 
-    'books2' => [
-        'base_uri' => env('BOOKS2_SERVICE_BASE_URL'),
-        'secret' => env('BOOKS2_SERVICE_SECRET'),
+    'authors' => [
+        'base_uri' => env('AUTHORS_SERVICE_BASE_URL'),
+        'secret' => env('AUTHORS_SERVICE_SECRET'),
     ],
 ];

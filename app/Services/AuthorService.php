@@ -4,11 +4,11 @@ namespace App\Services;
 
 use App\Traits\ConsumesExternalService;
 
-class Author2Service
+class AuthorService
 {
     use ConsumesExternalService;
     /**
-     * The base uri to consume the Author2 Service
+     * The base uri to consume the Author1 Service
      * @var string
      */
     public $baseUri;
@@ -16,31 +16,31 @@ class Author2Service
 
     public function __construct()
     {
-        $this->baseUri = config('services.books2.base_uri');
-        $this->secret = config('services.books2.secret');
+        $this->baseUri = config('services.authors.base_uri');
+        $this->secret = config('services.authors.secret');
     }
 
-    public function obtainAuthors2()
+    public function obtainAuthors()
     {
         return $this->performRequest('GET', '/authors');
     }
 
-    public function createAuthor2($data)
+    public function createAuthor($data)
     {
         return $this->performRequest('POST', '/authors', $data);
     }
 
-    public function obtainAuthor2($id)
+    public function obtainAuthor($id)
     {
         return $this->performRequest('GET', "/authors/{$id}");
     }
 
-    public function editAuthor2($data, $id)
+    public function editAuthor($data, $id)
     {
         return $this->performRequest('PUT', "/authors/{$id}", $data);
     }
 
-    public function deleteAuthor2($id)
+    public function deleteAuthor($id)
     {
         return $this->performRequest('DELETE', "/authors/{$id}");
     }
