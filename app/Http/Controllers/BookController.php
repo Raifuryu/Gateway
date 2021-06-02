@@ -55,6 +55,7 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->authorService->obtainAuthor($request->authorid);
         return $this->successResponse($this->bookService->editBook($request->all(), $id));
     }
     /**
