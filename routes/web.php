@@ -27,6 +27,6 @@ $router->group(['middleware' => 'client.credentials'], function () use ($router)
     $router->get('/authors', 'AuthorController@index'); // Get all authors from Authors Service
     $router->post('/authors', 'AuthorController@add'); // Create a new author from Authors Service
     $router->get('/authors/{id}', 'AuthorController@show'); // Get the author info based on author id from Authors Service
-    $router->put('/authors/{id}', 'AuthorControll er@update'); // Update a author record based on author id from Authors Service
+    $router->put('/authors/{id}', 'AuthorController@update'); // Update a author record based on author id from Authors Service
     $router->delete('/authors/{id}', 'AuthorController@delete'); // Delete author record based on author id from Authors Service
 });
